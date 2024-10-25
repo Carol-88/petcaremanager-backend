@@ -15,6 +15,11 @@ export class MongoRepository implements UserRepository {
         return user || null;
     }
 
+    async getUserByEmail(email: string): Promise<User | null> {
+        const user = await UserModel.findOne({ email }).lean();
+        return user || null;
+    }
+
     async updateUser(
         userId: string,
         updatedData: UserUpdateProps,
