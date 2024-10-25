@@ -3,6 +3,8 @@ export enum RestCodes {
     CODE_CREATED = 201,
     CODE_NO_CONTENT = 204,
     CODE_BAD_REQUEST = 400,
+    CODE_UNAUTHORIZED = 401,
+    CODE_NOT_FOUND = 404,
     INTERNAL_SERVER_ERROR = 500,
 }
 
